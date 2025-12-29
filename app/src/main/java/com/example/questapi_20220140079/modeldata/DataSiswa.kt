@@ -29,12 +29,12 @@ fun DetailSiswa.toDataSiswa(): DataSiswa = DataSiswa(
     telpon = telpon
 )
 
-fun com.example.questapi_20220140079.modeldata.DataSiswa.toUiStateSiswa(isEntryValid: Boolean = false): com.example.mydatasiswa.modeldata.UIStateSiswa = UIStateSiswa(
+fun com.example.questapi_20220140079.modeldata.DataSiswa.toUiStateSiswa(isEntryValid: Boolean = false): com.example.questapi_20220140079.modeldata.UIStateSiswa = UIStateSiswa(
     detailSiswa = this.toDetailSiswa(),
     isEntryValid = isEntryValid
 )
 
-fun com.example.questapi_20220140079.modeldata.DataSiswa.toDetailSiswa(): com.example.mydatasiswa.modeldata.DetailSiswa = DetailSiswa(
+fun com.example.questapi_20220140079.modeldata.DataSiswa.toDetailSiswa(): com.example.questapi_20220140079.modeldata.DetailSiswa = DetailSiswa(
     id = id,
     nama = nama,
     alamat = alamat,
