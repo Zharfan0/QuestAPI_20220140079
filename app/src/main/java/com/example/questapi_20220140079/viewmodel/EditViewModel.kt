@@ -1,0 +1,4 @@
+package com.example.questapi_20220140079.viewmodel
+
+class EditViewModel {
+}
