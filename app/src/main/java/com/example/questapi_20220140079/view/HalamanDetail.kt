@@ -33,6 +33,12 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.questapi_20220140079.R
+import com.example.questapi_20220140079.modeldata.DataSiswa
+import com.example.questapi_20220140079.uicontroller.route.DestinasiDetail
+import com.example.questapi_20220140079.viewmodel.DetailViewModel
+import com.example.questapi_20220140079.viewmodel.StatusUIDetail
+import com.example.questapi_20220140079.viewmodel.provider.PenyediaViewModel
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

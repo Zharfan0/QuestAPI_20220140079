@@ -12,6 +12,10 @@ import com.example.questapi_20220140079.uicontroller.route.DestinasiDetail
 import com.example.questapi_20220140079.uicontroller.route.DestinasiEdit
 import com.example.questapi_20220140079.uicontroller.route.DestinasiEntry
 import com.example.questapi_20220140079.uicontroller.route.DestinasiHome
+import com.example.questapi_20220140079.view.DetailSiswaScreen
+import com.example.questapi_20220140079.view.EditSiswaScreen
+import com.example.questapi_20220140079.view.EntrySiswaScreen
+import com.example.questapi_20220140079.view.HomeScreen
 
 @Composable
 fun DataSiswaApp(navController: NavHostController = rememberNavController(), modifier: Modifier){

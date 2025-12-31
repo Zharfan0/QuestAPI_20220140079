@@ -6,6 +6,10 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.questapi_20220140079.repositori.AplikasiDataSiswa
+import com.example.questapi_20220140079.viewmodel.DetailViewModel
+import com.example.questapi_20220140079.viewmodel.EditViewModel
+import com.example.questapi_20220140079.viewmodel.EntryViewModel
+import com.example.questapi_20220140079.viewmodel.HomeViewModel
 
 fun CreationExtras.aplikasiDataSiswa(): AplikasiDataSiswa = (
         this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as AplikasiDataSiswa
