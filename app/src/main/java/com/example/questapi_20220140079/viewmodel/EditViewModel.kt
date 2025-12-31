@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.questapi_20220140079.modeldata.DetailSiswa
 import com.example.questapi_20220140079.modeldata.UIStateSiswa
+import com.example.questapi_20220140079.modeldata.toDataSiswa
 import com.example.questapi_20220140079.modeldata.toUiStateSiswa
 import com.example.questapi_20220140079.repositori.RepositoryDataSiswa
 import com.example.questapi_20220140079.uicontroller.route.DestinasiDetail
