@@ -1,5 +1,6 @@
 package com.example.questapi_20220140079.repositori
 
+import android.app.Application
 import com.example.questapi_20220140079.apiservice.ServiceApiSiswa
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
@@ -40,4 +41,12 @@ class DefaultContainerApp : com.example.questapi_20220140079.repositori.Containe
 
     override val repositoryDataSiswa: RepositoryDataSiswa by lazy {
         JaringanRepositoryDataSiswa(retrofitService) }
+}
+
+class AplikasiDataSiswa : Application() {
+    lateinit var container : com.example.questapi_20220140079.repositori.ContainerApp
+    override fun onCreate() {
+        super.onCreate()
+        this.container = DefaultContainerApp()
+    }
 }
