@@ -31,15 +31,15 @@ class DetailViewModel(savedStateHandle: SavedStateHandle,private val repositoryD
 
     fun getSatuSiswa(){
         viewModelScope.launch {
-            statusUIDetail = com.example.mydatasiswa.viewmodel.StatusUIDetail.Loading
+            statusUIDetail = com.example.questapi_20220140079.viewmodel.StatusUIDetail.Loading
             statusUIDetail = try {
-                com.example.mydatasiswa.viewmodel.StatusUIDetail.Success(satusiswa = repositoryDataSiswa.getSatuSiswa(idSiswa))
+                com.example.questapi_20220140079.viewmodel.StatusUIDetail.Success(satusiswa = repositoryDataSiswa.getSatuSiswa(idSiswa))
             }
             catch (e: IOException){
-                com.example.mydatasiswa.viewmodel.StatusUIDetail.Error
+                com.example.questapi_20220140079.viewmodel.StatusUIDetail.Error
             }
             catch (e: HttpException){
-                com.example.mydatasiswa.viewmodel.StatusUIDetail.Error
+                com.example.questapi_20220140079.viewmodel.StatusUIDetail.Error
             }
         }
     }
