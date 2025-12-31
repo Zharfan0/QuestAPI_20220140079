@@ -1,11 +1,14 @@
 package com.example.questapi_20220140079.view
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
@@ -115,6 +118,27 @@ fun ErrorScreen(retryAction: () -> Unit, modifier: Modifier = Modifier) {
         Text(text = stringResource(R.string.gagal), modifier = Modifier.padding(16.dp))
         Button(onClick = retryAction) {
             Text(stringResource(R.string.retry))
+        }
+    }
+}
+
+@Composable
+fun DaftarSiswa(
+    itemSiswa : List<DataSiswa>,
+    //edit 2.1 : tambahkab parameter onSiswaClick
+    onSiswaClick: (DataSiswa) -> Unit,
+    modifier: Modifier=Modifier
+){
+    LazyColumn(modifier = Modifier){
+        items(items = itemSiswa, key = {it.id}){
+                person ->
+            ItemSiswa(
+                siswa = person,
+                modifier = Modifier
+                    .padding(dimensionResource(id = R.dimen.padding_small))
+                    //edit 2.2 jadikan itemsiswa menjadi clickable()
+                    .clickable { onSiswaClick(person) }
+            )
         }
     }
 }
