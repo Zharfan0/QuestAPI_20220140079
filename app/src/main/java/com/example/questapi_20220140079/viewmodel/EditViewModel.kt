@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.questapi_20220140079.modeldata.DetailSiswa
 import com.example.questapi_20220140079.modeldata.UIStateSiswa
 import com.example.questapi_20220140079.modeldata.toUiStateSiswa
 import com.example.questapi_20220140079.repositori.RepositoryDataSiswa
@@ -26,4 +27,9 @@ class EditViewModel(savedStateHandle: SavedStateHandle,private val repositoryDat
     fun updateUiState(detailSiswa: DetailSiswa) {
         uiStateSiswa =
             UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput(detailSiswa))
+    }
+    private fun validasiInput(uiState: DetailSiswa = uiStateSiswa.detailSiswa ): Boolean {
+        return with(uiState) {
+            nama.isNotBlank() && alamat.isNotBlank() && telpon.isNotBlank()
+        }
     }
