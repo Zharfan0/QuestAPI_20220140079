@@ -23,3 +23,7 @@ class EditViewModel(savedStateHandle: SavedStateHandle,private val repositoryDat
                 .toUiStateSiswa(true)
         }
     }
+    fun updateUiState(detailSiswa: DetailSiswa) {
+        uiStateSiswa =
+            UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput(detailSiswa))
+    }
